@@ -64,7 +64,7 @@ importers:
         specifier: ^8.11.3
         version: 8.11.5
       postcss:
-        specifier: ^8.4.34
+        specifier: ^8.4.38
         version: 8.4.38
       prettier:
         specifier: ^3.2.5
