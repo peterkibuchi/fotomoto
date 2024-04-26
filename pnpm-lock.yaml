@@ -61,7 +61,7 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3(eslint@8.57.0)
       pg:
-        specifier: ^8.11.3
+        specifier: ^8.11.5
         version: 8.11.5
       postcss:
         specifier: ^8.4.34
