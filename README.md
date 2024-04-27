@@ -4,10 +4,10 @@ A simple photo gallery app built on the [T3 Stack](https://create.t3.gg) and hos
 
 ## TODO
 
-- [ ] Deploy it (Vercel)
-- [ ] Scaffold basic UI with mock data
-- [ ] Tidy up build process
-- [ ] Actually set up a database (Vercel Postgres)
+- [x] Deploy it (Vercel)
+- [x] Scaffold basic UI with mock data
+- [x] Tidy up build process
+- [x] Actually set up a database (Vercel Postgres)
 - [ ] Attach database to UI
 - [ ] Add authentication (Clerk)
 - [ ] Add image upload
