@@ -8,7 +8,7 @@ A simple photo gallery app built on the [T3 Stack](https://create.t3.gg) and hos
 - [x] Scaffold basic UI with mock data
 - [x] Tidy up build process
 - [x] Actually set up a database (Vercel Postgres)
-- [ ] Attach database to UI
+- [x] Attach database to UI
 - [ ] Add authentication (Clerk)
 - [ ] Add image upload
 - [ ] "taint" (server-only)

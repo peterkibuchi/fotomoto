@@ -1,10 +1,20 @@
-export default function HomePage() {
+import { db } from "~/server/db";
+
+export default async function HomePage() {
+  const images = await db.query.images.findMany({
+    orderBy: (images, { desc }) => desc(images.id),
+  });
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Bare <span className="text-[hsl(280,100%,70%)]">Beginnings</span>
-        </h1>
+    <main className="">
+      <div className="flex flex-wrap gap-4">
+        {[...images, ...images, ...images].map((image, index) => (
+          <div key={image.id + "-" + index} className="flex w-48 flex-col">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={image.url} alt="" />
+            <div>{image.name}</div>
+          </div>
+        ))}
       </div>
     </main>
   );
