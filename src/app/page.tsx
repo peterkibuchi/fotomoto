@@ -1,11 +1,9 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
-import { db } from "~/server/db";
+import { getImagesByUser } from "~/server/queries";
 
 async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (images, { desc }) => desc(images.id),
-  });
+  const images = await getImagesByUser();
 
   return (
     <div className="flex flex-wrap gap-4">
