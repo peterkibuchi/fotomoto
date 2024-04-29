@@ -8,10 +8,12 @@ export const env = createEnv({
    */
   server: {
     CLERK_SECRET_KEY: z.string(),
-    POSTGRES_URL: z.string().url(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    POSTGRES_URL: z.string().url(),
+    UPLOADTHING_APP_ID: z.string(),
+    UPLOADTHING_SECRET: z.string(),
   },
 
   /**
@@ -29,8 +31,10 @@ export const env = createEnv({
    */
   runtimeEnv: {
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-    POSTGRES_URL: process.env.POSTGRES_URL,
     NODE_ENV: process.env.NODE_ENV,
+    POSTGRES_URL: process.env.POSTGRES_URL,
+    UPLOADTHING_APP_ID: process.env.UPLOADTHING_APP_ID,
+    UPLOADTHING_SECRET: process.env.UPLOADTHING_SECRET,
 
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
