@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 import { getImagesByUser } from "~/server/queries";
@@ -9,8 +10,13 @@ async function Images() {
     <div className="flex flex-wrap gap-4">
       {images.map((image) => (
         <div key={image.id} className="flex w-48 flex-col">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image.url} alt="" />
+          <Image
+            src={image.url}
+            alt={image.name}
+            width={192}
+            height={192}
+            style={{ objectFit: "contain" }}
+          />
           <div>{image.name}</div>
         </div>
       ))}
