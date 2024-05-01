@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.0.3",
+    "@clerk/nextjs": "^5.0.4",
     "@sentry/nextjs": "^7.112.2",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@uploadthing/react": "^6.5.1",
