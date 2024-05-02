@@ -6,6 +6,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import "~/styles/globals.css";
 
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import { Toaster } from "~/components/ui/sonner";
 import { TopNav } from "./_components/top-nav";
 
 const inter = Inter({
@@ -48,6 +49,7 @@ export default function RootLayout({
 
           {modal}
           <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
