@@ -15,7 +15,7 @@ A simple photo gallery app built on the [T3 Stack](https://create.t3.gg) and hos
 - [x] Use Next/Image component
 - [x] Error management (Sentry)
 - [x] Image page (w/ parallel routes)
-- [ ] Update upload button
+- [x] Update upload button
 - [ ] Analytics (PostHog)
 - [ ] Delete button (w/ server actions)
 - [ ] Ratelimiting (Upstash)
