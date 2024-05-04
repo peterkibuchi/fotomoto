@@ -7,6 +7,7 @@ import "~/styles/globals.css";
 
 import { ourFileRouter } from "~/app/api/uploadthing/core";
 import { Toaster } from "~/components/ui/sonner";
+import { CSPostHogProvider } from "./_analytics/provider";
 import { TopNav } from "./_components/top-nav";
 
 const inter = Inter({
@@ -41,16 +42,18 @@ export default function RootLayout({
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
 
-        <body className={`font-sans ${inter.variable} dark`}>
-          <div className="grid h-screen grid-rows-[auto,1fr]">
-            <TopNav />
-            <main className="overflow-y-scroll">{children}</main>
-          </div>
+        <CSPostHogProvider>
+          <body className={`font-sans ${inter.variable} dark`}>
+            <div className="grid h-screen grid-rows-[auto,1fr]">
+              <TopNav />
+              <main className="overflow-y-scroll">{children}</main>
+            </div>
 
-          {modal}
-          <div id="modal-root" />
-          <Toaster />
-        </body>
+            {modal}
+            <div id="modal-root" />
+            <Toaster />
+          </body>
+        </CSPostHogProvider>
       </html>
     </ClerkProvider>
   );
