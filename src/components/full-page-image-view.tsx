@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { clerkClient } from "@clerk/nextjs/server";
 
 import { Button } from "~/components/ui/button";
@@ -13,9 +14,14 @@ export async function FullPageImageView(props: { photoId: string }) {
 
   return (
     <div className="flex h-full w-screen min-w-0 items-center justify-center text-white">
-      <div className="flex-shrink flex-grow">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image.url} className="object-contain" alt={image.name} />
+      <div className="relative size-full">
+        <Image
+          src={image.url}
+          fill
+          priority
+          className="object-contain"
+          alt={image.name}
+        />
       </div>
 
       <div className="flex h-full w-56 flex-shrink-0 flex-col border-l">
