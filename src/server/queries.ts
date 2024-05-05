@@ -31,7 +31,7 @@ export async function getImageById(id: number) {
       and(eq(model.id, id), eq(model.userId, user.userId)),
   });
 
-  if (!image) throw new Error("Image not found");
+  if (!image) redirect("/");
 
   return image;
 }
